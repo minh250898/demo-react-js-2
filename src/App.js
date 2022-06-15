@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Main randomNumber="123" />
+      <Main />
     </div>
   );
 }

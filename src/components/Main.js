@@ -10,18 +10,27 @@ export default function Main(props) {
         const memesArray = memeImage.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
         const url = memesArray[randomNumber].url
-        const id = memesArray[randomNumber].id
         setMeme(prevMeme => ({
             ...prevMeme,
             randomImage: url,
+        }))
+    }
+    const [randomNumber, setRandomNumber] = React.useState({
+        random: ""
+    })
+    function random() {
+        setRandomNumber(prevRandomNumber => ({
+            ...prevRandomNumber,
+            random: Math.floor(Math.random() * 100) + 1,
         }))
     }
     return (
         <main>
             <div className="form">
                 <label className="form-input">{meme.randomImage}</label>
-                <label className="form-input">{props.randomNumber}</label>
+                <label className="form-input">{randomNumber.random}</label>
                 <button className="form-button" onClick={getMemeImage}>Get a new meme image</button>
+                <button className="form-button" onClick={random}>Random number</button>
             </div>
             <img src={meme.randomImage} alt="" className="form-image" />
         </main>
