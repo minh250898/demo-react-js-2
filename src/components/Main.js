@@ -27,7 +27,7 @@ export default function Main(props) {
     return (
         <main>
             <div className="form">
-                <label className="form-input">{meme.randomImage}</label>
+                <a href={meme.randomImage} target="_blank" className="form-input">{meme.randomImage}</a>
                 <label className="form-input">{randomNumber.random}</label>
                 <button className="form-button" onClick={getMemeImage}>Get a new meme image</button>
                 <button className="form-button" onClick={random}>Random number</button>
