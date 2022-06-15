@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  color: white;
+}
+.header-image {
+  margin-right: 6px;
+}
+.header-title {
+  margin-right: auto;
+}
+main {
+  padding: 36px;
+}
+.form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+}
+.form-input {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+}
+.form-button {
+  grid-column: 1 / -1;
+  border-radius: 5px;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.form-image {
+  margin-top: 12px;
+  max-height: 300px;
+}
